@@ -54,12 +54,15 @@ td{
     font-size: 28px;
     font-weight: bold;
     color=hsl(240, 100%, 50%);}
-  .dim{
-    opacity:0;
-  }
+
   .low{
     opacity:0.1;
   }
+
+  .dim{
+    opacity:0;
+  }
+
 
   h4{
     color:hsl(240,100%,50%);
