@@ -31,8 +31,8 @@ for (var i=0;i<boxes.length;i++)
 	boxes[i].classList.remove('hide');
 }}                 
 function disableall(){for(var i=0;i<boxes.length;i++)
-{boxes[i].disabled=true;
-	boxes[i].classList.add('hide');
+{boxes[i].classList.add('hide');
+boxes[i].disabled=true;
 }}
 var x;best.value=0;disableall();
 easy.onclick=function fun(){s=1;easy.classList.add('dim');var y=h.parentElement;y.removeChild(h);}
