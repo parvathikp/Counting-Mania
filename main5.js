@@ -25,14 +25,14 @@ for (var i=0;i<boxes.length;i++)
 		{boxes[i].value=number[r][i];
 			boxes[i].style.backgroundColor=col[boxes[i].value-1];
 		}}
-		var counter=0;var s=0;timer.value=0;
+		var counter=0;var s=0;timer.value=0; shuffle();
 		function enableall(){for(var i=0;i<boxes.length;i++)
 {boxes[i].disabled=false;
-	boxes[i].classList.remove('hide');
+	boxes[i].classList.remove('dim');
 }}                 
 function disableall(){for(var i=0;i<boxes.length;i++)
-{boxes[i].classList.add('hide');
-boxes[i].disabled=true;
+{boxes[i].disabled=true;
+	boxes[i].classList.add('dim');
 }}
 var x;best.value=0;disableall();
 easy.onclick=function fun(){s=1;easy.classList.add('dim');var y=h.parentElement;y.removeChild(h);}
@@ -46,7 +46,7 @@ const starttime = (p) => {
     }, 1);}
    start.onclick=function fun3(){
 	timer.value=0;time2=0;counter=0;
-  enableall();shuffle();start.disabled=true;
+  shuffle();enableall();start.disabled=true;
     var d=new Date();var p= d.getTime();
 	starttime(p);stat.innerHTML='';best.value=(JSON.parse(localStorage.getItem('bestscore'+parseInt(s)))||0);
      
@@ -61,11 +61,11 @@ function sounds(source){
  song.onclick=function fun6(){playsong=!playsong;if(playsong==true){music.pause();}else{music.play();}song.innerHTML=mymusic[song.innerHTML];}
  pop.onclick=function fun9(){playsong1=!playsong1;pop.innerHTML=mymusic1[pop.innerHTML];}
 boxes.forEach( (box) =>{box.onclick=function fun7(){if(playsong1==false){pops.play();}
-	if(box.value==counter+1){if(s==1){if(parseInt(box.value)>20){box.classList.add('hide');box.disabled=true;}
+	if(box.value==counter+1){if(s==1){if(parseInt(box.value)>20){box.classList.add('dim');box.disabled=true;}
 	else{box.value=parseInt(box.value)+20;}}
-if(s==2){if(parseInt(box.value)>40){box.classList.add('hide');box.disabled=true;}
+if(s==2){if(parseInt(box.value)>40){box.classList.add('dim');box.disabled=true;}
 else{box.value=parseInt(box.value)+20;}}
-if(s==3){if(parseInt(box.value)>60){box.classList.add('hide');box.disabled=true;}
+if(s==3){if(parseInt(box.value)>60){box.classList.add('dim');box.disabled=true;}
 	else{box.value=parseInt(box.value)+20;}}counter++;}
 if(counter==(20*(s+1))){timer.value=time2;if(s==1){easy.classList.remove('dim');}if(s==2){med.classList.remove('dim');}if(s==3){diff.classList.remove('dim');}
 	clearInterval(x); 

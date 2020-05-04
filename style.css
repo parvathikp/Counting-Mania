@@ -55,12 +55,9 @@ td{
     font-weight: bold;
     color=hsl(240, 100%, 50%);}
   .dim{
-    opacity:0.1;
+    opacity:0;
   }
-  .hide{
-    background-color: hsl(0,80%,0%);
-    color:hsl(0,80%,0%) ;
-  }
+
   h4{
     color:hsl(240,100%,50%);
     text-align: center;
