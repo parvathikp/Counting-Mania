@@ -58,7 +58,8 @@ td{
     opacity:0.1;
   }
   .hide{
-    display:none;
+    background-color: hsl(0,80%,0%);
+    color:hsl(0,80%,0%) ;
   }
   h4{
     color:hsl(240,100%,50%);

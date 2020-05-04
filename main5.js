@@ -25,7 +25,7 @@ for (var i=0;i<boxes.length;i++)
 		{boxes[i].value=number[r][i];
 			boxes[i].style.backgroundColor=col[boxes[i].value-1];
 		}}
-		var counter=0;var s=0;timer.value=0; shuffle();
+		var counter=0;var s=0;timer.value=0;
 		function enableall(){for(var i=0;i<boxes.length;i++)
 {boxes[i].disabled=false;
 	boxes[i].classList.remove('hide');
@@ -46,7 +46,7 @@ const starttime = (p) => {
     }, 1);}
    start.onclick=function fun3(){
 	timer.value=0;time2=0;counter=0;
-  shuffle();enableall();start.disabled=true;
+  enableall();shuffle();start.disabled=true;
     var d=new Date();var p= d.getTime();
 	starttime(p);stat.innerHTML='';best.value=(JSON.parse(localStorage.getItem('bestscore'+parseInt(s)))||0);
      
