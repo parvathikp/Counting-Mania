@@ -57,6 +57,9 @@ td{
   .dim{
     opacity:0;
   }
+  .low{
+    opacity:0.1;
+  }
 
   h4{
     color:hsl(240,100%,50%);

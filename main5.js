@@ -35,9 +35,9 @@ function disableall(){for(var i=0;i<boxes.length;i++)
 	boxes[i].classList.add('dim');
 }}
 var x;best.value=0;disableall();
-easy.onclick=function fun(){s=1;easy.classList.add('dim');var y=h.parentElement;y.removeChild(h);}
-med.onclick=function fun1(){s=2;med.classList.add('dim');var y=h.parentElement;y.removeChild(h);}
-diff.onclick=function fun2(){s=3;diff.classList.add('dim');var y=h.parentElement;y.removeChild(h);	}
+easy.onclick=function fun(){s=1;easy.classList.add('low');var y=h.parentElement;y.removeChild(h);}
+med.onclick=function fun1(){s=2;med.classList.add('low');var y=h.parentElement;y.removeChild(h);}
+diff.onclick=function fun2(){s=3;diff.classList.add('low');var y=h.parentElement;y.removeChild(h);	}
 const starttime = (p) => {
     x = setInterval(function() {
     	var f=new Date();
@@ -78,7 +78,7 @@ c.push(timer.value);localStorage.setItem('high'+parseInt(s),JSON.stringify(c));
 stop.onclick=function fun8(){
 	timer.value=time2;
 	clearInterval(x);start.disabled=false;
-	disableall();if(s==1){easy.classList.remove('dim');}if(s==2){med.classList.remove('dim');}if(s==3){diff.classList.remove('dim');}
+	disableall();if(s==1){easy.classList.remove('low');}if(s==2){med.classList.remove('low');}if(s==3){diff.classList.remove('low');}
 	var b=(JSON.parse(localStorage.getItem('high'+parseInt(s)))||[]);
 	b.sort(function(m,n){return parseFloat(m)-parseFloat(n);});
 	h=document.createElement('table');document.body.appendChild(h);h.setAttribute('id','g');
