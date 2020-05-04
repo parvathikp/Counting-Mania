@@ -57,6 +57,9 @@ td{
   .dim{
     opacity:0.1;
   }
+  .hide{
+    display:none;
+  }
   h4{
     color:hsl(240,100%,50%);
     text-align: center;
