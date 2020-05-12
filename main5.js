@@ -61,12 +61,12 @@ function sounds(source){
  song.onclick=function fun6(){playsong=!playsong;if(playsong==true){music.pause();}else{music.play();}song.innerHTML=mymusic[song.innerHTML];}
  pop.onclick=function fun9(){playsong1=!playsong1;pop.innerHTML=mymusic1[pop.innerHTML];}
 boxes.forEach( (box) =>{box.onclick=function fun7(){if(playsong1==false){pops.play();}
-	if(box.value==counter+1){if(s==1){if(parseInt(box.value)>20){box.classList.add('dim');box.disabled=true;}
-	else{box.value=parseInt(box.value)+20;}}
-if(s==2){if(parseInt(box.value)>40){box.classList.add('dim');box.disabled=true;}
-else{box.value=parseInt(box.value)+20;}}
-if(s==3){if(parseInt(box.value)>60){box.classList.add('dim');box.disabled=true;}
-	else{box.value=parseInt(box.value)+20;}}counter++;}
+	if(box.value==counter+1){if(s==1){if(parseInt(box.value)<=20){box.value=parseInt(box.value)+20;}
+	else{box.classList.add('dim');box.disabled=true;}}
+if(s==2){if(parseInt(box.value)<=40){box.value=parseInt(box.value)+20;}
+else{box.classList.add('dim');box.disabled=true;}}
+if(s==3){if(parseInt(box.value)<=60){box.value=parseInt(box.value)+20;}
+	else{box.classList.add('dim');box.disabled=true;}}counter++;}
 if(counter==(20*(s+1))){timer.value=time2;if(s==1){easy.classList.remove('dim');}if(s==2){med.classList.remove('dim');}if(s==3){diff.classList.remove('dim');}
 	clearInterval(x); 
 	stat.innerHTML='CONGRATS! Score is '+ timer.value;
